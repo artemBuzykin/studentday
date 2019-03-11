@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+	<header class="header" id="header">
+		<div class="topLine">
+			<div class="container">
+				<div class="topMenu">
+					<div class="topMenu__item">
+						<div class="topMenu__logo">
+							<a href="" class="logo"><img src="img/logo.png" alt=""></a>
+						</div>
+					</div>
+					<div class="topMenu__item mobile-logo ">
+						<a href="" class="logo"><img src="img/logo.png" alt=""></a>
+					</div>
+					<div class="topMenu__item mobile-mnu">
+						<nav class="topMenu__nav">
+							<ul>
+								<li><a href="#header">Главная</a></li>
+								<li><a href="#mainContent">Площадка</a></li>
+								<li><a href="#sale">Скидка</a></li>
+								<li><a href="#videoBlock">Клипы</a></li>
+								<li><a href="" class="btn">Выбрать билет</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="hamburger hamburger--spring">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mainContent">
+			<div class="container">
+				<div class="mainContent__descr">
+					<img src="img/hall.png" alt="" class="hall" style="margin-bottom: 30px;">
+					<p style="font-size:34px; opacity:0.8;">25 ЯНВАРЯ</p>
+					<p style="font-size:24px; opacity:0.8;">ПЯТНИЦА / 22:00</p>
+					<p style="font-size:24px; opacity:0.8;">МОСКВА</p>
+					<p style="font-size:124px;" class="bold">JAH KHALIB</p>
+					<a href="" class="btn">Выбрать билет</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="timer">
+		<div class="video__bg">
+			<video loop muted autoplay class="video__video-bg">
+				<source src="video/video.mp4" type="video/mp4">
+	 		</video>
+			<div class="container">
+				<div class="center">
+					<div class="counter">
+						<ul class="countdown">
+							<li> <span class="days">00</span>
+								<p>Дней</p>
+							</li>
+							<li> <span class="hours">00</span>
+								<p>Часов</p>
+							</li>
+							<li> <span class="minutes">00</span>
+								<p>Минут</p>
+							</li>
+							<li> <span class="seconds">00</span>
+								<p>Секунд</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="date" id="mainContent">
+		<div class="container">
+			<div class="date__descr">
+				<p class="yellow">25 ЯНВАРЯ</p>
+				<p><span class="yellow">ПЯТНИЦА</span> 22:00</p>
+				<img src="img/hall-p.png" alt="" class="hall">
+				<p>НА ПУШКИНСКОЙ ПЛОЩАДИ</p>
+				<p>БИЛЕТЫ ОТ <span class="pink">1000 <i class="fas fa-ruble-sign"></i></span></p>
+				<small>МОСКВА, ПУШКИНСКАЯ ПЛОЩАДЬ, Д.5 / <a  href="https://yandex.ru/maps/213/moscow/?ll=37.605589%2C55.766202&mode=search&oid=1156824249&ol=biz&z=17" target="_blank" class="pink">СХЕМА ПРОЕЗДА</a></small>
+			</div>
+		</div>
+	</section>
+	<section class="sale" id="sale">
+		<div class="container">
+			<div class="row align-items-center center">
+				<div class="col-sm-6">
+					<div class="saleBg">
+
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="mob-sale">
+						<div class="saleText">
+							<p><span class="yellow">КУПИ</span> ДВА БИЛЕТА <span class="yellow">И<br>ПОЛУЧИ СКИДКУ</span> В 10%</p>
+						</div>
+						<div class="saleOrder">
+							<a href="" class="btn">ПРИОБРЕСТИ БИЛЕТ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="videoBlock" id="videoBlock">
+		<div class="container">
+			<div class="videoWrap  center">
+				<div class="video js-video" style="background: url(img/zagl.png) no-repeat; margin-bottom:30px;">
+					<h3>Jah Khalib </h3>
+					<h3 style="font-weight: normal;">Медина</h3>
+					<div class="play">
+						<img src="img/play.png" alt="" id="firstVideo">
+					</div>
+				</div>
+				<div class="video js-video" style="background: url(img/zagl2.png) no-repeat;">
+					<h3>Jah Khalib </h3>
+					<h3 style="font-weight: normal;">Лейла</h3>
+					<div class="play">
+						<img src="img/play.png" alt="" id="secondVideo">
+					</div>
+				</div>
+			</div>
+			<div class="videoOrder center">
+				<a href="" class="btnDark">КУПИТЬ БИЛЕТ</a>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footerLine center">
+				<p>2018 БОЛЬШОЙ ДЕНЬ СТУДЕНТА</p>
+				<p>Все права защищены</p>
+				<ul class="social">
+					<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href=""><i><span class="fab fa-vk"></span></i></a></li>
+					<li><a href=""><i class="fab fa-youtube"></i></a></li>
+					<li><a href=""><i class="fab fa-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+<script src="js/scripts.min.js"></script>
+</body>
+
+</html>

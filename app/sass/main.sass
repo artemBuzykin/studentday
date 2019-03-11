@@ -1,0 +1,566 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "reset"
+
+*::-webkit-input-placeholder, select
+	color: #202020
+	opacity: 1
+
+*:-moz-placeholder, select
+	color: #202020
+	opacity: 1
+
+*::-moz-placeholder, select
+	color: #202020
+	opacity: 1
+
+*:-ms-input-placeholder, select
+	color: #202020
+	opacity: 1
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+*
+	padding: 0
+	margin: 0
+html, body
+	// height: 100%
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	overflow-x:  hidden
+	font-family: $default-font, sans-serif
+	opacity: 1
+	color: #fff
+a, a:hover, a:visited, a:active, a:focus
+		color: inherit
+		text-decoration: none
+		box-shadow: none
+		outline: none
+.btn.focus, .btn:focus
+	box-shadow: none
+.h1, .h2
+	display: block
+h2
+	text-transform: uppercase
+	font-weight: bold
+button, input
+	border: none
+	outline: none
+.yellow
+	color: $yellow
+a.btn, .btn
+	color: #080808
+	background: $yellow
+	text-align: center
+	padding: 8px 15px
+	border-radius: 25px
+.center
+	text-align: center
+	margin: 0 auto
+.hamburger
+	z-index: 9999999
+	display: none
+	padding: 0
+.hamburger.is-active .hamburger-inner:before, .hamburger.is-active .hamburger-inner:after
+	background: #000
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	background: #fff
+.header
+	height: 900px
+	color: #fff
+	background: url(../img/header.png) no-repeat
+	background-size: cover
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,.7)
+.topMenu, .botMenu
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+.topMenu__logo, .botMenu__logo
+	position: relative
+	font-size: 28px
+.topMenu__nav, .botMenu__nav
+	position: relative
+	ul
+		li
+			display: inline-block
+			margin-left: 20px
+			font-weight: bold
+			&:first-child
+				margin-left: 0
+			a.btn
+				color: #000
+.mainContent
+	position: relative
+	padding-top: 70px
+	.hall
+		margin: 10px 0
+	.mainOrder
+		padding-top: 70px
+		padding-left: 10px
+		a.btn
+			width: 250px
+			font-size: 22px
+.mainContent__img
+	background: url(../img/headerArtist.png) no-repeat
+	background-size: cover
+	background-position: center
+	height: 652px
+.mouse
+	position: relative
+.lineup
+	position: relative
+	background: #080808
+.lineup__title
+	padding-top: 85px
+	padding-bottom: 120px
+	h2
+		font-size: 3em
+		font-family: "intro"
+.lineup__mob
+	display: none
+.lineup__carousel-item_text
+	padding-top: 15px
+.lineup__carousel-item_link
+	padding-top: 70px
+	a.btn
+		background: #080808
+		border: 1px solid $yellow
+		color: $yellow
+.lineup__carousel-item_img
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: contain
+	height: 350px
+.lineup__carousel
+	position: relative
+	.owl-dots
+		position: absolute
+		text-align: center
+		left: 40%
+		bottom: 70px
+		cursor: default
+		.owl-dot
+			display: inline-block
+			margin-top: 35px
+			margin-right: 18px
+			width: 12px
+			height: 12px
+			line-height: 12px
+			background-color: #080808
+			border: 1px solid #fff
+			border-radius: 50%
+			transition: all .4s ease
+			&.active
+				background: $yellow
+.lineup__row
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+.lineup__img
+	position: relative
+	img
+		width: 100%
+		max-width: 100%
+.lineup_overlay
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		transition: all .5s ease
+		background: rgba(#080808,.8)
+.lineup__img-hover
+	position: absolute
+.lineup__img-hover_point
+	width: 25px
+	height: 25px
+	background: $yellow
+	border-radius: 50%
+	&::before
+		content: ""
+		position: absolute
+		top: -5px
+		left: -6px
+		width: 37px
+		height: 37px
+		border: 1px solid $yellow
+		border-radius: 50%
+.lineup-first
+	right: 70px
+	top: 120px
+.lineup__img-hover_text
+	transform: scale(0)
+	position: absolute
+	white-space: nowrap
+	font-size: 28px
+	top: -100px
+	right: -180px
+	z-index: 2
+	border-bottom: 2px solid $yellow
+	transition: all .5s ease
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		top: 40px
+		left: -31px
+		background: $yellow
+		width: 3px
+		height: 60px
+		transform: skewX(-45deg)
+.lineup-second
+	left: 30px
+	top: 100px
+	.lineup__img-hover_text
+		top: -96px
+		right: 82px
+		&::before
+			top: 39px
+			left: 103px
+			height: 65px
+			transform: skewX(45deg)
+.lineup-three
+	left: 30px
+	top: 120px
+	.lineup__img-hover_text
+		top: -96px
+		right: 82px
+		&::before
+			top: 39px
+			left: 111px
+			height: 65px
+			transform: skewX(45deg)
+.lineup-four
+	left: 30px
+	top: 120px
+	.lineup__img-hover_text
+		top: -96px
+		right: 82px
+		&::before
+			top: 40px
+			left: 175px
+			height: 65px
+			transform: skewX(45deg)
+.lineup__img:hover .lineup__img-hover_text
+	transform: scale(1)
+.lineup__img:hover .lineup__img-hover_point::before
+	display: none
+.lineup__img:hover .lineup__img-hover_link
+	opacity: 1
+.lineup__img:hover .lineup_overlay::before
+	opacity: 0
+.lineup__img-hover_link
+	transition: all .5s ease-in-out
+	opacity: 0
+	color: #fff
+	position: absolute
+	width: 200px
+	margin: 0 auto 10px
+	text-align: center
+	bottom: 10px
+	left: 20px
+	padding: 15px
+	background: rgba(#080808, .7)
+	z-index: 2
+	a
+		text-decoration: underline
+.aboutUs
+	padding-top: 100px
+	padding-bottom: 100px
+	background: #080808
+.aboutUs__img
+	background-size: cover
+	background-repeat: no-repeat
+	height: 450px
+	background-position: center center
+.aboutUs__title
+	font-family: "intro"
+	padding-top: 30px
+	padding-bottom: 30px
+	h2
+		font-size: 2em
+.aboutUs__text
+	p
+		padding-bottom: 10px
+.aboutUs__counter
+	padding-top: 50px
+	padding-bottom: 50px
+	span
+		font-family: "intro"
+		font-weight: bold
+		font-size: 36px
+		color: $yellow
+	p
+		padding-top: 10px
+		font-weight: bold
+		font-size: 14px
+.video__bg
+	overflow: hidden
+	position: relative
+	width: 100%
+	height: 100%
+.video__video-bg
+	position: absolute
+	top: 0
+	left: 0
+	min-width: 100%
+	min-height: 100%
+.joinUs
+	min-height: 500px
+	.video__video-bg
+		margin-top: -200px
+.joinUs__overlay
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		transition: all .5s ease
+		background: rgba(#080808,.8)
+.joinUs__block
+	position: relative
+	padding: 200px 0
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	justify-content: space-around
+	.join__text
+		text-align: center
+		text-transform: uppercase
+		font-size: 3em
+		font-family: "intro"
+		font-weight: bold
+	.join__desk
+		font-size: 138px
+	.join__play
+		height: 150px
+		width: 150px
+		text-align: center
+		border-radius: 50%
+		border: 2px solid $yellow
+		display: inline-block
+		line-height: 150px
+		position: relative
+		cursor: pointer
+		.fa
+			padding-top: 45px
+			padding-left: 15px
+			font-size: 50px
+.price
+	padding-bottom: 90px
+	&__title
+		padding: 50px 0
+		color: #333333
+		font-size: 48px
+		font-family: "intro"
+		font-weight: bold
+.price__bg
+	background: #080808
+.priceCard
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	padding: 40px 20px
+	height: 430px
+.price__head
+	p
+		font-weight: bold
+.price__footer
+	font-weight: bold
+.price__body
+	margin-top: -30px
+	p
+		font-size: 80px
+		padding-bottom: 10px
+		font-family: "intro"
+	span
+		opacity: .5
+.price__order
+	padding-top: 30px
+	border-top: 1px solid #fff
+	a.btn
+		min-width: 200px
+		color: #fff
+.price__counter
+	padding-top: 30px
+	i
+		font-size: 14px
+		color: #333
+ul.countdown
+	margin: 35px 0 0 0
+	display: block
+	transition: all .5s ease
+	&:hover
+		transform: scale(1.1)
+ul.countdown li
+	display: inline-block
+	text-align: center
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		width: 40px
+		height: 47px
+		top: -33px
+		left: 50px
+		border-radius: 50%
+		background: #fff
+		z-index: 2
+	&::after
+		content: ""
+		position: absolute
+		width: 40px
+		height: 37px
+		bottom: 15px
+		left: 50px
+		border-radius: 50%
+		background: #fff
+		z-index: 2
+ul.countdown li span
+	position: relative
+	background: #2c2f36
+	font-size: 30px
+	font-family: "Arial"
+	color: #fff
+	text-align: center
+	margin-right: -5px
+	border-radius: 50%
+	line-height: 70px
+	display: inline-block
+	width: 70px
+	height: 70px
+	&::before
+		content: ""
+		position: absolute
+		border: 20px solid transparent
+		border-top: 30px solid #2c2f36
+		top: 6px
+		left: 50px
+	&::after
+		content: ""
+		position: absolute
+		border: 20px solid transparent
+		border-bottom: 30px solid #2c2f36
+		bottom: 6px
+		left: 50px
+ul.countdown li:last-of-type span::before, ul.countdown li:last-of-type span::after
+	display: none
+ul.countdown li:last-of-type
+	&::before, &::after
+		display: none
+ul.countdown li p
+	color: #333
+	padding-top: 20px
+	font-size: 14px
+	font-family: Arial
+.sale
+	padding-top: 50px
+	min-height: 600px
+	background: #080808
+.saleBg
+	min-height: 450px
+	background: url(../img/saleBg.png) no-repeat center
+.saleText
+	p
+		font-family: "intro"
+		font-weight: bold
+		font-size: 2.5em
+.saleOrder
+	padding-top: 65px
+	a.btn
+		color: #fff
+.map
+	width: 100%
+	position: relative
+.mapText
+	color: #333
+	position: absolute
+	width: 50%
+	margin: 0 auto 10px
+	text-align: center
+	top: 10px
+	left: 25%
+	padding: 10px
+	background: hsla(0, 100%, 100%, 0.75)
+	z-index: 100
+	p
+		font-size: 2.5em
+		padding-bottom: 10px
+.footer
+	padding: 70px 0
+	background: #080808
+.social
+	li
+		display: inline-block
+		margin-left: 20px
+		&:first-child
+			margin-left: 0
+		a
+			opacity: .7
+			&:hover
+				opacity: 1
+.botMenu
+	padding-bottom: 70px
+.copyright
+	padding-top: 70px
+	border-top: 1px solid $yellow
+	display: flex
+	align-items: center
+	justify-content: space-between
+.copyright__item
+	p
+		opacity: .5
+.youVideo
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 30px
+	height: 0
+	overflow: hidden
+.youVideo iframe,
+.youVideo object,
+.youVideo embed
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+.hidden
+	display: none
+.modal__video
+	max-width: 700px
+	height: 400px
+	background: #000
+@import "media" // Всегда в конце
